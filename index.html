@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>3D AMG Highway Cockpit</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background: #000;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: #fff;
+    }
+    #hud {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background: rgba(0,0,0,0.55);
+      padding: 8px 12px;
+      border-radius: 8px;
+      font-size: 13px;
+      z-index: 10;
+    }
+    #hud span.value {
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <div id="hud">
+    Speed: <span class="value" id="speedText">0</span> km/h<br>
+    RPM: <span class="value" id="rpmText">800</span><br>
+    Gear: <span class="value" id="gearText">D</span><br>
+    Signals: <span class="value" id="signalText">Off</span><br>
+    Controls: W/S throttle & brake, A/D steer, Z/X signals
+  </div>
+
+  <canvas id="game"></canvas>
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>
